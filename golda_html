@@ -23,8 +23,13 @@
         
         /* Visual Callouts over the map */
         .map-marker-label { position: absolute; padding: 4px 12px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; color: white; transform: translate(-50%, -50%); pointer-events: none; z-index: 20; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .label-golda { background: #C5A059; top: 50%; left: 50%; }
-        .label-road4 { background: #e11d48; top: 45%; left: 75%; }
+        
+        /* תיקון מיקומים לפי המפה של גוגל: */
+        /* כביש 4 (הסימון שלנו) עובר לשמאלו של הריבוע האדום המובנה במפה */
+        .label-road4 { background: #e11d48; top: 50%; left: 58%; }
+        /* גולדה 20 עובר לימינו של הריבוע האדום המובנה במפה */
+        .label-golda { background: #C5A059; top: 50%; left: 42%; }
+        
         .label-road2 { background: #2563eb; top: 40%; left: 20%; }
         .label-road9 { background: #059669; top: 80%; left: 55%; }
 
@@ -74,7 +79,7 @@
 
             <!-- FLOOR 1 -->
             <div class="grid md:grid-cols-2 gap-20 items-center mb-32 section-step">
-                <div class="order-1 md:order-1">
+                <div class="order-1">
                     <h3 class="text-3xl font-extrabold mb-6 text-slate-900">1. קומת הכניסה - הלב הפועם והביחד המשפחתי</h3>
                     <p class="text-lg text-slate-600 mb-6 italic border-r-4 border-gold pr-4">
                         "חלל אחד רחב ומואר המשלב את המטבח והסלון בהרמוניה מושלמת."
@@ -87,7 +92,7 @@
                         לצפייה בתשריט קומת הכניסה
                     </button>
                 </div>
-                <div class="order-2 md:order-2">
+                <div class="order-2">
                     <img src="5.jpg" alt="קומת כניסה" class="rounded-3xl shadow-2xl w-full h-[450px] object-cover">
                 </div>
             </div>
@@ -105,7 +110,7 @@
                     </button>
                 </div>
                 <div class="md:order-1">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="סוויטת הורים אילוסטרציה" class="rounded-3xl shadow-2xl w-full h-[450px] object-cover">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="סוויטת הורים" class="rounded-3xl shadow-2xl w-full h-[450px] object-cover">
                 </div>
             </div>
 
@@ -139,8 +144,9 @@
                         <div class="map-container">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26958.576439941864!2d34.90!3d32.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1710000000000!5m2!1sen!2sil" allowfullscreen="" loading="lazy"></iframe>
                             
-                            <div class="map-marker-label label-golda animate-bounce">גולדה 20</div>
+                            <!-- Updated Positions based on Feedback -->
                             <div class="map-marker-label label-road4">כביש 4</div>
+                            <div class="map-marker-label label-golda animate-bounce">גולדה 20</div>
                             <div class="map-marker-label label-road2">כביש 2</div>
                             <div class="map-marker-label label-road9">כביש 9</div>
                         </div>
@@ -220,7 +226,7 @@
                         <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
                     <h4 class="text-lg font-bold mb-2">רכבת חדרה</h4>
-                    <p class="text-slate-500 text-sm">נסיעה קצרה של <strong>כ-5 דקות</strong> בלבד, לקישוריות מהירה לכל הארץ.</p>
+                    <p class="text-slate-500 text-sm">נסיעה קצרה של <strong>כ-5 דקות</strong> בלבד.</p>
                 </div>
 
                 <!-- Central Bus Station -->
@@ -230,7 +236,7 @@
                     </div>
                     <h4 class="text-lg font-bold mb-2">תחנה מרכזית</h4>
                     <p class="text-slate-500 text-xs font-semibold mb-2 text-gold">במרחק כ-3 דקות הליכה</p>
-                    <p class="text-slate-500 text-sm">קרבה יוצאת דופן לתחנה המרכזית, המאפשרת נגישות מלאה לכל קווי האוטובוס.</p>
+                    <p class="text-slate-500 text-sm">קרבה יוצאת דופן לתחנה המרכזית.</p>
                 </div>
 
                 <!-- Commercial Center 1 (Sha'arei Hadera) -->
@@ -240,7 +246,7 @@
                     </div>
                     <h4 class="text-lg font-bold mb-2">מרכז שערי חדרה</h4>
                     <p class="text-slate-500 text-xs font-semibold mb-2 text-gold">במרחק כ-3 דקות הליכה</p>
-                    <p class="text-slate-500 text-sm">סופר גדול, ארומה, אפשרויות אוכל וחנויות - הכל מתחת לבית.</p>
+                    <p class="text-slate-500 text-sm">סופר גדול, ארומה וחנויות - הכל מתחת לבית.</p>
                 </div>
 
                 <!-- Commercial Center 2 (Mul HaHof) -->
@@ -250,7 +256,7 @@
                     </div>
                     <h4 class="text-lg font-bold mb-2">מול החוף וילג'</h4>
                     <p class="text-slate-500 text-xs font-semibold mb-2 text-gold">כ-5 דקות נסיעה</p>
-                    <p class="text-slate-500 text-sm">המרכז המוביל באזור לחוויית קנייה, פנאי ובילוי מושלמת.</p>
+                    <p class="text-slate-500 text-sm">חוויית קנייה, פנאי ובילוי מושלמת.</p>
                 </div>
 
                 <!-- City Center -->
@@ -259,7 +265,7 @@
                         <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                     <h4 class="text-lg font-bold mb-2">מרכז העיר</h4>
-                    <p class="text-slate-500 text-sm">נגישות מהירה <strong>במרחק כ-דקות ספורות</strong> לכל השירותים והבנקים.</p>
+                    <p class="text-slate-500 text-sm">נגישות מהירה לכל השירותים והבנקים.</p>
                 </div>
             </div>
         </div>
@@ -273,8 +279,6 @@
             <div class="w-20 h-1 bg-gold mx-auto mb-10"></div>
             <p class="text-xl md:text-2xl font-light opacity-90 leading-relaxed mb-12">
                 אין סיבה להתפשר על איכות החיים והנוחות המשפחתית. 'גולדה 20' מציע את השילוב המדויק שבין פרטיות מוחלטת, גינה ירוקה צמודה והחופש שקיים רק בבית פרטי – והכל בתנאי רכישה אופטימליים. 
-                <br><br>
-                זו ההזדמנות שלכם להבטיח למשפחה מרחב אישי ומעוצב בנכס שרק הולך ומשביח. במקום להצטופף בבניין רב קומות עם לובי משותף וחניונים המוניים, אתם בוחרים בנכס אינטימי שמציע תמורה מקסימלית להשקעה שלכם. <strong>אל תתפשרו על פחות מבית פרטי שעונה בדיוק על הצרכים שלכם.</strong>
             </p>
             <div class="inline-flex items-center gap-4 text-gold font-bold text-lg">
                 <span class="w-8 h-[1px] bg-gold"></span>
@@ -292,9 +296,6 @@
                 <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">החלום שלכם עם העיצוב שלכם</h2>
                 <p class="text-xl text-slate-600 leading-relaxed mb-6">
                     היופי ב'גולדה 20' הוא המקום שבו התכנון המקצועי פוגש את הטעם האישי שלכם. עם היתרי בנייה קיימים ותוכנית אדריכלית מוקפדת, הבסיס כבר כאן – אבל הנשמה של הבית תהיה שלכם.
-                </p>
-                <p class="text-xl text-slate-600 leading-relaxed">
-                    מכיוון שהבנייה בתחילתה, נפתח לכם חלון הזדמנויות להשפיע על פנים הבית. אתם אלו שתבחרו את סגנון הריצוף, את גווני המטבח ואת הפרטים הקטנים שהופכים חללים לבית אמיתי. זה לא סתם לקנות נכס מוכן – זו ההזדמנות לעצב לעצמכם את סביבת המגורים שחלמתם עליה.
                 </p>
             </div>
             <div class="md:w-1/2">
